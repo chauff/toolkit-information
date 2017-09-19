@@ -79,3 +79,29 @@ and the command `more /myhome/Vol45-krovetz/index/1/manifest` should yield:
 
 Note that the manifest file shows you the number of documents/terms in the index (useful sanity check).
 
+
+### Querying the index
+
+It is useful to separate out the parameters for the retrieval phase (index and retrieval rules):
+```xml
+<parameters>
+<rule>method:dirichlet,mu:1000</rule>
+<index>/myhome/Vol45-krovetz
+</parameters>
+```
+
+and the parameters for the queries:
+```xml
+<parameters>
+<query>
+<number>101</number>
+<text>#combine(prime factors)</text>
+</query>
+<query>
+<number>102</number>
+<text>#combine(dog food)</text>
+</query>
+<parameters>
+```
+Lets call these files `param1` and `param2`. To run the queries over the index, run: `/myhome/Indri/bin/IndriRunQuery param1 param2`. This call will print the document rankings to the terminal. All available parameters for `IndriRunQuery` can be found [here](https://lemur.sourceforge.io/indri/IndriRunQuery.html). Note that two parameter files are not strictly necessary, more or fewer parameter files can be used (as long as they are wrapped in `<parameters>`).
+
