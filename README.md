@@ -25,7 +25,7 @@ In order to index a collection `IndriBuildIndex` is used; it takes one or more p
 
 For TREC disks 4 & 5 a typical `buildindex.param` file looks as follows:
 
-```
+```xml
 <parameter>
  <corpus>
   <path>/home/claudia/Vol45/Vol45-corpus/collection/corpus/</path>
