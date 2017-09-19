@@ -44,7 +44,7 @@ To start the indexing process, run `/myhome/Indri/bin/IndriBuildIndex buildindex
 
 To check whether the indexing was successful, take a look at the `manifest` files in the created index. The command `more /myhome/Vol45-krovetz/manifest` should yield an output similar to this one:
 
-```
+```xml
 <parameters>
 	<indexCount>2</indexCount>
 	<indexes>
@@ -60,7 +60,7 @@ To check whether the indexing was successful, take a look at the `manifest` file
 
 and the command `more /myhome/Vol45-krovetz/index/1/manifest` should yield:
 
-```
+```xml
 <parameters>
 	<code-build-date>Sep 19 2017</code-build-date>
 	<corpus>
