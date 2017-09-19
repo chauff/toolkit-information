@@ -86,7 +86,7 @@ It is useful to separate out the parameters for the retrieval phase (index and r
 ```xml
 <parameters>
  <rule>method:dirichlet,mu:1000</rule>
- <index>/myhome/Vol45-krovetz
+ <index>/myhome/Vol45-krovetz</index>
 </parameters>
 ```
 
