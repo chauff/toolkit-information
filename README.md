@@ -28,13 +28,13 @@ For TREC disks 4 & 5 a typical `buildindex.param` file looks as follows:
 ```xml
 <parameter>
  <corpus>
-  <path>/home/claudia/Vol45/Vol45-corpus/collection/corpus/</path>
+  <path>/myhome/Vol45-corpus/</path>
   <class>trectext</class>
  </corpus>
  <stemmer>
   <name>krovetz</name>
  </stemmer>
- <index>/home/claudia/Indri-indices/Vol45-krovetz</index>
+ <index>/myhome/Vol45-krovetz</index>
 </parameter>
 ```
 
@@ -42,7 +42,7 @@ The `class` parameter is set according to the manner, in which the collection do
 
 To start the indexing process, run `/myhome/Indri/bin/IndriBuildIndex buildindex.param`.
 
-To check whether the indexing was successful, take a look at the `manifest` files in the created index. The command `more home/claudia/Indri-indices/Vol45-krovetz/manifest` should yield an output similar to this one:
+To check whether the indexing was successful, take a look at the `manifest` files in the created index. The command `more /myhome/Vol45-krovetz/manifest` should yield an output similar to this one:
 
 ```
 <parameters>
@@ -58,7 +58,7 @@ To check whether the indexing was successful, take a look at the `manifest` file
 </parameters>
 ```
 
-and the command `more /home/claudia/Indri-indices/Vol45-krovetz/index/1/manifest` should yield:
+and the command `more /myhome/Vol45-krovetz/index/1/manifest` should yield:
 
 ```
 <parameters>
