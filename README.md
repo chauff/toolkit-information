@@ -26,7 +26,7 @@ In order to index a collection `IndriBuildIndex` is used; it takes one or more p
 For TREC disks 4 & 5 a typical `buildindex.param` file looks as follows:
 
 ```xml
-<parameter>
+<parameters>
  <corpus>
   <path>/myhome/Vol45-corpus/</path>
   <class>trectext</class>
@@ -35,7 +35,7 @@ For TREC disks 4 & 5 a typical `buildindex.param` file looks as follows:
   <name>krovetz</name>
  </stemmer>
  <index>/myhome/Vol45-krovetz</index>
-</parameter>
+</parameters>
 ```
 
 The `class` parameter is set according to the manner, in which the collection documents are formatted. If this class is set incorrectly (it is incompatible with the format of the collection documents), the index usually fails to be created. The stemmer here is set to the Krovetz stemmer, if the `<stemmer>` lines are removed or an invalid stemmer name is chosen, no stemming occurs. The `path` is the path to the input collection directory, and the `index` determines where the index is stored.
